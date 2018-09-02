@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t98-Lb-v9b">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7YP-bp-CUy">
+            <objects>
+                <navigationController id="t98-Lb-v9b" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FUN-Dn-516">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PdI-LI-aoU" kind="relationship" relationship="rootViewController" id="1QR-PG-huR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Mw-eF-KK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="52"/>
+        </scene>
+        <!--Number Input View Sample-->
+        <scene sceneID="38y-Bj-JPw">
+            <objects>
+                <viewController id="PdI-LI-aoU" customClass="ViewController" customModule="NumberInputViewSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p9t-Vk-bgr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osx-6V-Z8O">
+                                <rect key="frame" x="181.5" y="84" width="12" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rh5-Pc-Qkk">
+                                <rect key="frame" x="187.5" y="113" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvQ-il-Ka6">
+                                <rect key="frame" x="20" y="602" width="335" height="45"/>
+                                <color key="backgroundColor" red="0.24919006229999999" green="0.63991189000000004" blue="0.247087419" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="AfT-Y6-sxA"/>
+                                </constraints>
+                                <state key="normal" title="Open Number Input View"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="whenOpenButtonTapped:" destination="PdI-LI-aoU" eventType="touchUpInside" id="LEl-lU-e1O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="osx-6V-Z8O" firstAttribute="centerX" secondItem="I5p-13-mhb" secondAttribute="centerX" id="44E-ON-8Y0"/>
+                            <constraint firstItem="Rh5-Pc-Qkk" firstAttribute="top" secondItem="osx-6V-Z8O" secondAttribute="bottom" constant="8" id="9gM-lB-Yq6"/>
+                            <constraint firstItem="I5p-13-mhb" firstAttribute="trailing" secondItem="uvQ-il-Ka6" secondAttribute="trailing" constant="20" id="D8I-jg-6W2"/>
+                            <constraint firstItem="Rh5-Pc-Qkk" firstAttribute="centerX" secondItem="I5p-13-mhb" secondAttribute="centerX" id="aBF-hH-JDK"/>
+                            <constraint firstItem="uvQ-il-Ka6" firstAttribute="leading" secondItem="I5p-13-mhb" secondAttribute="leading" constant="20" id="f2o-2n-MAL"/>
+                            <constraint firstItem="osx-6V-Z8O" firstAttribute="top" secondItem="I5p-13-mhb" secondAttribute="top" constant="20" id="qBh-Fd-hfK"/>
+                            <constraint firstItem="I5p-13-mhb" firstAttribute="bottom" secondItem="uvQ-il-Ka6" secondAttribute="bottom" constant="20" id="yFb-Ih-HZL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I5p-13-mhb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Number Input View Sample" id="tVA-EM-oDb"/>
+                    <connections>
+                        <outlet property="numberLabel" destination="osx-6V-Z8O" id="aqG-dD-oJv"/>
+                        <outlet property="tipsLabel" destination="Rh5-Pc-Qkk" id="aax-VR-Zp6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rjw-2l-XWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="52"/>
+        </scene>
+    </scenes>
+</document>
